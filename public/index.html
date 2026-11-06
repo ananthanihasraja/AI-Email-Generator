@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Email Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="logo">✉</div>
+      <p class="eyebrow">WRITE SMARTER</p>
+      <h1>AI Email Generator</h1>
+      <p class="subtitle">Turn a few simple details into a clear email in seconds.</p>
+    </header>
+
+    <section class="panel">
+      <form id="emailForm">
+        <label for="recipient">Recipient <span>(optional)</span></label>
+        <input id="recipient" name="recipient" placeholder="e.g. Professor Kumar">
+
+        <label for="purpose">What is the email about? <span class="required">*</span></label>
+        <textarea id="purpose" name="purpose" rows="3" required placeholder="e.g. Request permission to attend a workshop"></textarea>
+
+        <label for="tone">Choose a tone</label>
+        <select id="tone" name="tone">
+          <option>Professional</option>
+          <option>Formal</option>
+          <option>Friendly</option>
+          <option>Casual</option>
+        </select>
+
+        <label for="details">Additional details <span>(optional)</span></label>
+        <textarea id="details" name="details" rows="3" placeholder="Add dates, reasons, or other information to include"></textarea>
+
+        <button id="generateBtn" type="submit">✨ Generate Email</button>
+        <p class="privacy">Tip: Avoid entering passwords or confidential personal information.</p>
+      </form>
+    </section>
+
+    <section id="resultPanel" class="panel result hidden" aria-live="polite">
+      <div class="result-head">
+        <h2>Your email</h2>
+        <span id="modeBadge" class="badge">Ready</span>
+      </div>
+      <label for="subjectOutput">Subject</label>
+      <input id="subjectOutput">
+      <label for="bodyOutput">Email body</label>
+      <textarea id="bodyOutput" rows="10"></textarea>
+      <div class="actions">
+        <button id="copyBtn" type="button" class="secondary">Copy email</button>
+        <button id="downloadBtn" type="button" class="secondary">Download .txt</button>
+      </div>
+      <p id="status" class="status"></p>
+    </section>
+    <footer>Mini-project demonstration · Review the email before sending.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
